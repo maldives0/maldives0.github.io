@@ -1,14 +1,19 @@
 ---
 title: About
-icon: fas fa-info
+author: juyoung
+date: 2020-11-19 17:20:00 +0800
 order: 4
-
-# The About page
-# v2.0
-# https://github.com/cotes2020/jekyll-theme-chirpy
-# © 2017-2019 Cotes Chung
-# MIT License
 ---
 
+## FrontEnd Developer를 목표로 공부하며  
 
-> **Note**: Add Markdown syntax content to file `_tabs/about.md` and it will show up on this page.
+## 매일 새로 알게 된 내용을 기록하기 위한 블로그입니다.
+<br/>
+<br/>
+
+	  너는 존재한다 
+      - 그러므로 사라질 것이다  
+	  너는 사라진다 
+      - 그러므로 아름답다   
+ 
+			 > 비스와바 쉼보르스카, 두 번은 없다
