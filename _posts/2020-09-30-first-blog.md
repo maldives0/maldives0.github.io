@@ -1,7 +1,7 @@
 ---
 title: 깃허브 블로그 github.io Blog 만들기
 author: juyoung
-date: 2019-08-09 20:55:00 +0800
+date: 2020-09-30 20:55:00 +0800
 categories: [diary, github.io]
 tags: [github.io]
 ---
