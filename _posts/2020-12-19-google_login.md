@@ -2,8 +2,9 @@
 title: passportjs를 이용한 google OAuth 로그인 기능 구현하기
 author: juyoung
 date: 2020-12-16 16:08:00 +0800
-categories: [react, API]
-tags: [API]
+categories: [project, api]
+tags: [api]
+pin: true
 ---
 
 # 0. 구글 API console에 접속해 OAuth 클라이언트 ID를 만들기

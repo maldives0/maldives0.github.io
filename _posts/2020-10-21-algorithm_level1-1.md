@@ -4,6 +4,7 @@ author: juyoung
 date: 2020-10-21 18:46:00 +0800
 categories: [algorithm, Level1]
 tags: [algorithm]
+pin: true
 ---
 
 '2020.10.21' 부터 프로그래머스에 있는 알고리즘 연습문제를 풀기 시작했다.  

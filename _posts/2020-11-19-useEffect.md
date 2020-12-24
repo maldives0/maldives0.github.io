@@ -1,9 +1,10 @@
 ---
-title: react hook useEffect()
+title: React Hooks - useEffect()
 author: juyoung
 date: 2020-11-19 18:46:00 +0800
 categories: [react, tutorial]
 tags: [react]
+pin: true
 ---
 
  # [1] Mount: 컴포넌트가 처음 실행될 때   

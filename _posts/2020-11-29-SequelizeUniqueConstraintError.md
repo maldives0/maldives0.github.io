@@ -6,6 +6,10 @@ categories: [project, error]
 tags: [error]
 ---
 
+* 다음은 프론트 서버에서 saga로 fork를 두번 했을 때 발생하는 에러입니다.  
+
+# 문제상황:
+백서버 Sequelize에서 자꾸 유일해야하는 key값이 'follow.PRIMARY': '2-1'와 같이 중복된다고 나와서 당황했다.   
 
 ![followError.jpg](/assets/img/followError.jpg)
 
@@ -42,10 +46,11 @@ UniqueConstraintError [SequelizeUniqueConstraintError]: Validation error
 ```
 
 
-해결방법:
-제로초님이 네트워크에 요청이 두번 가고 있다고 해서 혹시나하고 사가를 확인해보니
-userSaga에서 fork를 두번하고 있었다...
+# 해결방법:
+제로초님께 인프런으로 이 부분을 질문했더니 네트워크에서 요청이 두번 가고 있으니 확인해보라고 해서 혹시나하고 사가를 확인해보니
+userSaga에서 fork를 두번하고 있었다... 허허
 
+```javascript
 export default function* userSaga() {
     yield all([
         fork(watchLoadFollowers),
@@ -60,5 +65,5 @@ export default function* userSaga() {
         fork(watchLogin),
         fork(watchLogout),
     ]);
-
 }
+```

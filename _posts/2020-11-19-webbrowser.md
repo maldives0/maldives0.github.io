@@ -6,7 +6,7 @@ categories: [html, syntax]
 tags: [html]
 ---
 
-![](https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/904/2234.png)
+![객체지도](https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/904/2234.png)
   
   ## BOM(Browser Object Model): 
   웹브라우저의 창이나 프래임을 추상화해서 프로그래밍적으로 제어할 수 있도록 제공하는 수단
