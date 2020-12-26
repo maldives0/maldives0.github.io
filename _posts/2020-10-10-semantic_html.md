@@ -6,16 +6,16 @@ categories: [html, syntax]
 tags: [html]
 ---
 
-1. 웹 표준
+# 1. 웹 표준
 
-# <font color=skyblue>웹 표준(Web Standards) 이란</font>  
+### <font color=skyblue>웹 표준(Web Standards) 이란</font>  
 '웹에서 표준적으로 사용되는 기술이나 규칙'으로 표준화 단체인 W3C가 권고한 표준안에 따라 웹사이트를 작성하는 것이다. 어떤 운영체제나 브라우저를 사용하더라도 웹페이지가 동일하게 보이고 정상 작동해야함을 의미한다.
 
 
 
 
 
-## 웹 표준의 장점 
+## 웹 표준의 장점은, 
 
  1. 개발 및 운영의 효율성 제고. 즉 소스의 통일화로 수정 및 운영관리가 용이하다.
  2. 다양한 브라우저, 휴대폰 PDA, 장애인 지원용 프로그램에서도 대응이 가능하므로 접근성이 향상 되고, 장애인, 고령자 등을 포함한 사용자층도 확대 가능하다. 
@@ -27,7 +27,7 @@ tags: [html]
 
  
 
-## 웹 표준의 기술
+## 웹 표준의 기술로는,
 1. XHTML ( eXtensible Hypertext Markup Language ) 
 2. CSS (Cascading Style Sheets) 
 3. XML (eXtensible Markup Language) 
@@ -36,9 +36,9 @@ tags: [html]
 
 
 
-2. 웹접근성
+# 2. 웹접근성
 
-# <font color=skyblue>웹 접근성(Web Accessibility) 이란</font>  
+### <font color=skyblue>웹 접근성(Web Accessibility) 이란</font>  
 
  
 장애인, 고령자 등이 웹 사이트에서 제공하는 정보에 비장애인과 동등하게 접근하고 이해할 수 있도록 보장하는 것이다.
@@ -60,10 +60,11 @@ tags: [html]
 
 참고로 웹 접근성 자가진단 서비스 사이트와 크롬사용자라면 확장프로그램인 OpenWAX를 통해 자체 진단을 할 수 있다.
 
+  
 
-3. 시맨틱 마크업
+# 3. 시맨틱 마크업
 
-# <font color=skyblue>시맨틱(Semantic) 이란</font> 
+### <font color=skyblue>시맨틱(Semantic) 이란</font> 
 시맨틱(Semantic)은 "의미론적인"이란 뜻을 가진 단어이다.
 즉 개발자와 브라우저에게 의미있는 태그를 제공한다고 이해하면 될 것 같다.
 
@@ -75,7 +76,7 @@ tags: [html]
 
 
 
-시멘틱 마크업 작성의 장점
+## 시멘틱 마크업 작성의 장점
 
  1. 접근성이 좋아짐
 
@@ -88,4 +89,4 @@ tags: [html]
 
 출처:   
 [[웹표준]HTML5 시맨틱(Semantic) 마크업](https://yeoninim.tistory.com/20),  
-[[웹표준]HTML5 시맨틱(Semantic) 마크업](https://goddaehee.tistory.com/244 ),  
+[웹표준의 이해(웹 표준이란?)](https://goddaehee.tistory.com/244 )

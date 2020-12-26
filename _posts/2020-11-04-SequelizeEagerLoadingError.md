@@ -2,7 +2,7 @@
 title: papago 번역기의 중요성
 author: juyoung
 date: 2020-11-04 23:36:00 +0800
-categories: [project, error]
+categories: [diary, error]
 tags: [error]
 ---
 
