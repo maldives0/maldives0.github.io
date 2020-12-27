@@ -1,5 +1,5 @@
 ---
-title: programmers algorithm test Level1 네 번째
+title: programmers_Level1_javascript 네 번째
 author: juyoung
 date: 2020-11-17 19:06:00 +0800
 categories: [algorithm, Level1]
@@ -8,6 +8,7 @@ tags: [algorithm]
 
 
 
+[프로그래머스에서 문제 확인하기](https://programmers.co.kr/learn/challenges?selected_part_id=12079)
 
 # 31. 약수의 합
 
@@ -280,6 +281,81 @@ function solution(n) {
 }
 console.log(solution(987));
 
-```  
+```    
+  
+  # 37. 내적
+    
+    reduce()를 알고는 있는데 이런 쉬운 문제에서도 막상 쓰려면 막히는 걸 보니 reduce가 어렵나보다..ㅜㅜ
+   > reduce(function(accumulator, currentValue, currentIndex, array) {}
+    sol2를 보고 reduce의 콜백에서 currentValue를 '_'로 쓰면 빈값으로 놔두는 걸 알게 됐다.  
 
-[프로그래머스](https://programmers.co.kr/learn/challenges?selected_part_id=12079)
+```javascript
+//sol1
+function solution(a, b) {
+    let sum = 0;
+    for (let i = 0; i < a.length; i++) {
+        sum += a[i] * b[i];
+    }
+    return sum;
+}
+
+//sol2
+function solution(a, b) {
+    return a.reduce((acc, _, i) => acc += a[i] * b[i], 0);
+}
+
+//sol3
+var solution = (a, b) => a.reduce((a, c, i) => a + c * b[i], 0);
+console.log(solution([-1, 0, 1], [1, 0, -1]));
+
+```    
+
+# 38. 예산  
+    
+문제를 풀 때 규칙을 우선 발견하는 것이 중요하다는 것을 다시 한 번 깨달은 문제였다.
+부서별 신청 금액이 담긴 d 배열을 오름차순으로 정리해서 가장 큰 숫자를 하나씩 빼나가면 최대 지원해줄 수 있는 부서의 수를 구할 수 있다.
+
+
+```javascript
+//sol 1
+function solution(d, budget) {
+    while (d.sort((p, c) => p - c).reduce((a, c) => (a + c), 0) > budget) d.pop();
+    return d.length;
+}
+//sol2
+function solution(d, budget) {
+    let count = 0;
+    let sum = 0;
+    d.sort((p, c) => p - c);
+    for (let i = 0; i < d.length; i++) {
+        count++;
+        sum += d[i];
+        console.log(count, sum);
+        if (sum > budget) {
+            count--;
+            break;
+        }
+    }
+    return count;
+}
+//sol3
+function solution(d, budget) {
+    let count = 0;
+    let sum = 0;
+    d.sort((p, c) => p - c);
+    for (let i = 0; i < d.length; i++) {
+        sum += d[i];
+        count = d.length;
+        console.log(sum, i);
+        if (sum > budget) {
+            count = i;
+            break;
+        }
+    }
+    return count;
+}
+console.log(solution([1, 3, 2, 5, 4], 9));
+```
+
+
+참고:#10. 예산 (프로그래머스) - JavaScript <https://velog.io/@qwerzxcvss/10.-%EC%98%88%EC%82%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-JavaScript>

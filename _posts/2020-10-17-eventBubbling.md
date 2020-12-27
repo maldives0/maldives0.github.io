@@ -4,7 +4,6 @@ author: juyoung
 date: 2020-10-16 18:56:00 +0800
 categories: [project, resolution]
 tags: [project]
-pin: true
 ---
 
 # 검색결과 목록 드레그하기

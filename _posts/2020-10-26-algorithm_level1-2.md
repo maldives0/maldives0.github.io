@@ -1,11 +1,15 @@
 ---
-title: programmers algorithm test Level1 두번째
+title: programmers_Level1_javascript 두번째
 author: juyoung
 date: 2020-10-26 18:46:00 +0800
 categories: [algorithm, Level1]
 tags: [algorithm]
 ---
+     
+ 문자를 다룰 땐 역시 [정규표현식](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/%EC%A0%95%EA%B7%9C%EC%8B%9D)이 가장 코드량이 짧고 효율적인 듯 하다.
+ '배열은 편리하고 성능도 좋은 메소드를 많이 제공하므로 얼마나 많은 메소드를 알고 있냐가 프로그래밍의 효율성을 좌지우지한다'는 제로초님 말처럼 알고리즘 문제를 풀면서 배열 뿐 아니라 문자, 숫자와 관련된 다양한 메소드들을 찾아보고 여러 번 써보면서 익히는 시간이었다.
 
+  [프로그래머스에서 문제 확인하기](https://programmers.co.kr/learn/challenges?selected_part_id=12079)
 
 # 11. 콜라츠 추측
 
@@ -391,4 +395,7 @@ console.log(solution(19875));
 
 ```  
 
-[프로그래머스](https://programmers.co.kr/learn/challenges?selected_part_id=12079)
+참고:  
+
+MDN <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array>
+regexr <https://regexr.com/>

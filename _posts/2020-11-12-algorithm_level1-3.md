@@ -1,11 +1,17 @@
 ---
-title: programmers algorithm test Level1 세번째
+title: programmers_Level1_javascript 세번째
 author: juyoung
 date: 2020-11-12 19:06:00 +0800
 categories: [algorithm, Level1]
 tags: [algorithm]
 ---
+    
+함수가 자기 자신을 호출하는 재귀로 된 풀이방법을 보면 어떻게 이런 걸 생각해낼 수 있는지 놀랍다.
+21번 '최대공약수와 최소공배수' 문제는 재귀함수가 바로 이런 것이란 것 알게 된 문제였다.  
+level 1 정도까지는 다른 사람의 풀이를 참고하면서 공부하고 있지만 level 2부터는 알고리즘에 대한 기본 이론을 공부하고 도전해야겠다.   
+'Hello 알고리즘',  '미래를 바꾼 아홉 가지 알고리즘' 같은 책으로 기본적인 이론을 배워가고 있는 중이다.  
 
+  [프로그래머스에서 문제 확인하기](https://programmers.co.kr/learn/challenges?selected_part_id=12079)
 
 # 21. 최대공약수와 최소공배수
 
@@ -466,4 +472,4 @@ console.log(solution(118372));
 ```  
   
    
-[프로그래머스](https://programmers.co.kr/learn/challenges?selected_part_id=12079)
+

@@ -4,7 +4,6 @@ author: juyoung
 date: 2020-11-19 16:08:00 +0800
 categories: [javascript, syntax]
 tags: [javascript]
-pin: true
 ---
 
 

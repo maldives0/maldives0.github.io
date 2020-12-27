@@ -1,17 +1,17 @@
 ---
-title: programmers algorithm test Level1 첫번째
+title: programmers_Level1_javascript 첫번째
 author: juyoung
 date: 2020-10-21 18:46:00 +0800
 categories: [algorithm, Level1]
 tags: [algorithm]
-pin: true
 ---
 
 '2020.10.21' 부터 프로그래머스에 있는 알고리즘 연습문제를 풀기 시작했다.  
 처음 일주일은 해답을 보지 않으면 2-3시간을 고민해도 안풀렸는데 조금씩 비슷한 풀이가 나오기 시작하자 혼자 힘으로 쉬운 문제는 풀리는 게 신기했다. 
 
 내가 푼 방식과 함께 프로그래머스에 있던 다른 기발한 답들도 함께 기록한다.
-  
+
+  [프로그래머스에서 문제 확인하기](https://programmers.co.kr/learn/challenges?selected_part_id=12079)  
 
 # 1. 2016년
 
@@ -421,4 +421,4 @@ function solution(c, r) {
 ```  
   
 
-[프로그래머스](https://programmers.co.kr/learn/challenges?selected_part_id=12079)
+

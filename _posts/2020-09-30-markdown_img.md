@@ -1,5 +1,5 @@
 ---
-title: haroopad local img url 경로 설정방법
+title: markdown local img url 경로 설정방법
 author: juyoung
 date: 2020-09-30 22:55:00 +0800
 categories: [diary, github.io]
