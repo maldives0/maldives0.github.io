@@ -1,5 +1,5 @@
 ---
-title: ES6
+title: ES6문법 개요정리
 author: juyoung
 date: 2020-10-01 20:55:00 +0800
 categories: [javascript, ES6]
@@ -20,7 +20,9 @@ ES6는 EcmaScript6의 준말로 뒷의 숫자는 자바스크립트의 버전을
 9. Map, Set, WeakMap, WeakSet
 10. Promise
 11. 반복기(iterator), 생성기(generator)
+12. 모듈 시스템
 
+출처:
 zeroCho blog : <https://www.zerocho.com/category/ECMAScript/>
 
 모던 javascript tutorials : <https://ko.javascript.info/advanced-functions>

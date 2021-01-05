@@ -2,7 +2,7 @@
 title: 시맨틱(Semantic)
 author: juyoung
 date: 2020-10-10 09:00:00 +0800
-categories: [html, syntax]
+categories: [html, concept]
 tags: [html]
 ---
 
