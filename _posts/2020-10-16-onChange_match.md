@@ -36,7 +36,7 @@ tags: [project]
  먼저 html에 `<form>` 테그를 만들고 addEventListener로 submit 콜백함수를 불러온다. 이때 e.preventDefault()로 input값을 넣고 enter할 때마다 페이지가 새로고침되지 않도록 막아야 input의 value를 얻을 수 있다.  
 
 ## 3. `match` method로 json data 검색하기
- 검색하고자 하는 밀롱가의 영어, 또는 한국어 이름과 input의 value를 비교한다. 대소문자 구분 없이 비교하려면 정규표현식으로 비교하려는 값 뒤에 /gi를 넣으면 된다는데... `(input value)/gi`를 하지 않아도 대소문자 구분없이 비교가 되긴 했다.  
+ 검색하고자 하는 밀롱가의 영어, 또는 한국어 이름과 input의 value를 비교한다. 대소문자 구분 없이 비교하려면 정규표현식으로 비교하려는 값 뒤에 `/gi`를 넣어 `(input value)/gi`와 같이 설정을 하면 된다고 하는데... `en.match(inputVal)`해도 대소문자 구분없이 비교가 되긴 했다.  
   
 
 이러한 과정을 거치면 match했을 때 같은 단어가 들어간 이름의 목록이 object형식으로 주어진다.
@@ -71,11 +71,8 @@ __proto__: Array(0)
         
         ulEle.innerHTML = '';
         input.addEventListener('change',function(e){
-            inputVal = e.target.value;
-           
-        });
-       
-       
+            inputVal = e.target.value;           
+        }); 
      
         response.millonga.forEach(function (el, idx) {
             thumb = el.thumb;
@@ -83,29 +80,25 @@ __proto__: Array(0)
             en = el.en;
             address = el.address;
             ko = el.ko;
-           
-          
+                     
             let a = en.match(inputVal);
             let b = ko.match(inputVal);
             //  console.log(a || b);
                                
-                  if (a || b) {
-                 
+                  if (a || b) {                
                     liEle = "<li class='item item" + idx + " f_b'>";
                     liEle += "<div class='con f_b'> <div class='leftsec'><div class='thumb'><a class='linkA link" + idx + "' href='" + url + "'><img src='" + thumb + "' alt='" + en + "'></a></div></div>";
                     liEle += " <div class='rightsec'> <div class='f_b'><h4 class='f_b'>" + en + "</h4><span>거리m</span></div><h6>" + ko + "</h6>";
                     liEle += " <p class='address'>" + address + "</p></div> </div>";
                     liEle += " <div class='appraisal'><span class='like'>371</span><span class='write'>39</span> </div></li>";
-                    ulEle.innerHTML += liEle;
-                   
+                    ulEle.innerHTML += liEle;                
                     input.value = '';
                     input.focus();  
                   }else if(!a || !b){
                     input.value = '';
                     input.focus();  
                   }
-            });
-           
+            });           
     }//datafun
 
 ```
