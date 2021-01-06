@@ -14,6 +14,12 @@ tags: [project]
 4. input값이 바뀌면 match로 얻은 값을 새로고침한다.
   
 
+  
+
+## 2. <form> 테그 만들기  
+
+ 먼저 html에 `<form>` 테그를 만들고 addEventListener로 submit 콜백함수를 불러온다. 이때 e.preventDefault()로 input값을 넣고 enter할 때마다 페이지가 새로고침되지 않도록 막아야 input의 value를 얻을 수 있다.  
+  
   ```html
     <form>
             <div class="inputarea f_b">
@@ -29,13 +35,8 @@ tags: [project]
         </form>
 ```
     
+## 3. match method로 json data 검색하기  
 
-
-## 2. `<form>` 테그 만들기  
-
- 먼저 html에 `<form>` 테그를 만들고 addEventListener로 submit 콜백함수를 불러온다. 이때 e.preventDefault()로 input값을 넣고 enter할 때마다 페이지가 새로고침되지 않도록 막아야 input의 value를 얻을 수 있다.  
-
-## 3. `match` method로 json data 검색하기
  검색하고자 하는 밀롱가의 영어, 또는 한국어 이름과 input의 value를 비교한다. 대소문자 구분 없이 비교하려면 정규표현식으로 비교하려는 값 뒤에 `/gi`를 넣어 `(input value)/gi`와 같이 설정을 하면 된다고 하는데... `en.match(inputVal)`해도 대소문자 구분없이 비교가 되긴 했다.  
   
 
@@ -59,7 +60,8 @@ __proto__: Array(0)
 <br> `inputVal = e.target.value`와 같이 target의 value를 할당하면 input에 검색어가 달라지면 enter를 쳤을 때 change 콜백함수가 실행되며 전 value값이 삭제된다. 
 이로써 ulEle에 쌓이는 목록이 검색어가 달라질 때마다 매번 새로워진다.  
 
-* input창에 입력을 마치고 enter를 치면 input창에 커서가 focus되고 빈칸으로 바뀌도록 할 때도 inputVal=''; 이라고 하면 검색한 값이 계속 남아있는데 반해 input.value='';라고 선언하면 빈칸이 된다. input의 매개변수인 value를 사용해야만 기능한다는 사실을 드디어 깨달았다...
+
+* input창에 입력을 마치고 enter를 치면 input창에 커서가 focus되고 빈칸으로 바뀌도록 할 때도 `inputVal=''` 이라고 하면 검색한 값이 계속 남아있는데 반해 `input.value=''`라고 선언하면 빈칸이 된다. input의 매개변수인 `value`를 사용해야만 기능한다는 사실을 드디어 깨달았다...
 
 ```javascript
 
@@ -83,14 +85,14 @@ __proto__: Array(0)
                      
             let a = en.match(inputVal);
             let b = ko.match(inputVal);
-            //  console.log(a || b);
-                               
-                  if (a || b) {                
+                                          
+       if (a || b) {                
                     liEle = "<li class='item item" + idx + " f_b'>";
                     liEle += "<div class='con f_b'> <div class='leftsec'><div class='thumb'><a class='linkA link" + idx + "' href='" + url + "'><img src='" + thumb + "' alt='" + en + "'></a></div></div>";
                     liEle += " <div class='rightsec'> <div class='f_b'><h4 class='f_b'>" + en + "</h4><span>거리m</span></div><h6>" + ko + "</h6>";
                     liEle += " <p class='address'>" + address + "</p></div> </div>";
                     liEle += " <div class='appraisal'><span class='like'>371</span><span class='write'>39</span> </div></li>";
+
                     ulEle.innerHTML += liEle;                
                     input.value = '';
                     input.focus();  

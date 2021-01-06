@@ -12,8 +12,7 @@ tags: [project]
     <div class="slider">
         <div class="listbox">
             <ul class="items">
-<!-- <li class="item" id="0">
-    </li>                 -->
+<!-- <li class="item" id="0"></li>                 -->
             </ul>
         </div>
     </div>
