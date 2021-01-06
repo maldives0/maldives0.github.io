@@ -89,23 +89,30 @@ tags: [project]
 
 ```  
 <br />
- 알아보니 자바스크립트 앱을 만들 때 자주 사용되는 패턴 중 책임 연쇄 패턴에서 자주 마주칠 수 있는 현상이 <font color=purple>이벤트 버블링</font> 현상이다.
+ 나중에 알고보니 자바스크립트 앱을 만들 때 자주 사용되는 패턴 중 책임 연쇄 패턴에서 자주 마주칠 수 있는 현상이 <font color=purple>이벤트 버블링</font> 현상이다.
   
 
 ## <font color=purple>이벤트 버블링</font> 현상이란,
 
- > DOM에 연결한 이벤트는 버블링이 일어납니다. 어떤 태그에 이벤트가 발생하면 그 이벤트는 해당 태그의 부모나 조상에게도 순서대로 발생합니다. 
- ```
+ > DOM에 연결한 이벤트는 버블링이 일어나서 해당 태그에 이벤트가 발생하면 그 이벤트는 해당 태그의 부모나 조상에게도 순서대로 발생한다.   
+
+ ```javascript
  <div id="first">
    <div id="second">
     <div id="third">
     </div>
    </div>
  </div>
- ```
- 위와 같은 구조가 있을 때 div#third를 클릭한 경우, 부모와 조상 태그인 second, first 순으로 같은 클릭 이벤트가 발생합니다. 
- 이 때 사용자가 이벤트 리스너를 달아서 어떤 태그에서 이벤트를 처리할지, 또는 다음 태그로 이벤트 처리 수행을 넘길지 결정할 수 있습니다. 이와 같이 동작의 처리를 자신이 할지 다음으로 넘길지 결정하는 패턴이 책임 연쇄입니다.
+ ```  
+
+  위와 같은 구조가 있을 때 `div#third`를 클릭한 경우, 부모와 조상 태그인 `div#second`, `div#first` 순으로 같은 클릭 이벤트가 발생한다. 
+  이럴 때는 위의 해결방법처럼 eventListender를 달아줄 테그를 변경하거나, 이벤트 객체를 매개변수로 사용하는 활용하는 방법도 있다.     
+
+  > DOM에 eventListender로 이벤트에 연결한 함수는 이벤트 객체를 매개변수로 사용할 수 있는데 그중에 `stopPropagation` 메소드는 태그를 클릭 시 부모에게 이벤트가 전달(버블링)되지 않도록 한다.   
+  `stopImmediatePropagation`은 버블링을 막음과 동시에 같은 이벤트의 다른 리스너도 실행되지 않도록 한다.
+ 
+ 
 <br />
 <br />
-참고  
-zeroCho blog : <https://www.zerocho.com/category/JavaScript/>
+참고:  
+[zeroCho blog : 이벤트 리스너와 콜백](https://www.zerocho.com/category/JavaScript/post/57432d2aa48729787807c3fc)
