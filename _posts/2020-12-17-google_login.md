@@ -5,6 +5,9 @@ date: 2020-12-17 16:08:00 +0800
 categories: [project, api]
 tags: [api]
 ---
+  
+  
+
 
 # 0. 구글 API console에 접속해 OAuth 클라이언트 ID를 만들기
 <br />
@@ -185,7 +188,11 @@ module.exports = router;
 <br />
 
 # 4. 구글 redirection url 수정하기
-<br />
+<br />  
+![front-login-error](/assets/img/front-login-error.jpg)  
+저의 경우 AWS에 배포하는 과정에서 로그인을 할 때 ` isAxiosError: true`라는 에러가 발생했는데 redirection url를 배포 도메인으로 다시 설정해주지 않아서였습니다.  
+
+
 
 ![구글 403 승인오류](/assets/img/google_error.jpg)
 
@@ -202,6 +209,8 @@ module.exports = router;
 참고로 2016년 10월 20일 이후로 안드로이드 , iOS 및 OS X 사용자는 크롬 브라우저로만 구글 oauth를 이용한 로그인이 가능하다.
 
 ![안드로이드 구글 403 승인오류](/assets/img/google_android_error.jpg)
+  
+    
 
 참고:    
 
