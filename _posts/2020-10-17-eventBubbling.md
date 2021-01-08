@@ -67,14 +67,11 @@ tags: [project]
             listBox.classList.remove('active');
         });
 
-        item.forEach(function (el) {
-            el.addEventListener('mouseup', (e) => {
-                // console.log(e.currentTarget);
-                isDown = false;
-                listBox.classList.remove('active');
-                endPos();
-            });
-      });
+           listBox.addEventListener('mouseup', (e) => {
+            isDown = false;
+            listBox.classList.remove('active');
+            endPos();
+        });
                      function endPos() {
             if (startX > endX) {
                 //next
