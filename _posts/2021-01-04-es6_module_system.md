@@ -12,7 +12,7 @@ tags: [javascript]
 모듈은 export 방식의 차이에 따라 다르게 import해주어야 한다.
 
 ## (1) Node 모듈 시스템
-Node 모듈 시스템은 commonjs방식을 쓴다.  
+Node 모듈 시스템은 common.js방식을 쓴다.  
 
 file1.js
 ```javascript
@@ -100,9 +100,10 @@ file2.js
     console.log(food); // { apple: 'red', coconut: 'white', default: 'yellow' }
 ```
 
-* 모듈은 아직 대다수의 브라우저에서 지원하지 않기 때문에 BabelJS 같은 컴파일러를 사용해서 ES5 스타일로 바꿔줘야 한다.
+* 모듈은 아직 대다수의 브라우저에서 지원하지 않기 때문에 BabelJS 같은 컴파일러를 사용해서 ES6 스타일로 바꿔줘야 한다.
 
-출처:
+출처:  
+
 [zerocho blog: ES2015(ES6) 모듈 시스템](https://www.zerocho.com/category/ECMAScript/post/579dca4054bae71500727ab9)  
 
 [zerocho blog: Node 모듈 시스템](https://www.zerocho.com/category/NodeJS/post/5835b500373b5b0018a81a10)  
