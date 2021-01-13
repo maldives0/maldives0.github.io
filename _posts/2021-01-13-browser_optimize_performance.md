@@ -6,14 +6,25 @@ categories: [html, concept]
 tags: [html]
 ---
 
-   [[2018] 프런트엔드 성능 최적화](https://www.youtube.com/watch?v=G1IWq2blu8c)라는 동영상을 보며 브라우저에서 로딩과 렌더링 최적화가 얼마나 중요한지에 대한 설명을 듣던 중 DOMContentLoaded, virtual DOM, 런타임과 빌드타임, SSR 등등 실제 프로젝트를 하며 많이 들었던 개념들이 나왔다. 이런 개념들이 아직 애매하게 다가와 동영상의 내용을 정리하며 다시 집어보기로 한다. 
+   [프런트엔드 성능 최적화](https://www.youtube.com/watch?v=G1IWq2blu8c)라는 동영상을 보며 브라우저에서 로딩과 렌더링 최적화가 얼마나 중요한지에 대한 설명을 듣던 중 DOMContentLoaded, virtual DOM, 런타임과 빌드타임, SSR 등등 실제 프로젝트를 하며 많이 들었던 개념들이 나왔다. 이런 개념들이 아직 애매하게 다가와 동영상의 내용을 정리하며 다시 집어보기로 한다. 
+<br />
+<br />
+우선 브라우저의 동작원리를 간단하게 설명하자면 브라우저의 렌더링 엔진은 다음의 과정을 걸쳐 화면에 사용자가 요청한 정보를 그리게 된다.
+
+ 1. HTML 파싱 후 DOM 트리(DOM Tree) 만들기 : HTML의 테그를 브라우저가 읽은 수 있는 DOM 트리로 변환하는 과정으로 웹 상에 나타날 내용을 만든다.
+ 2. 렌더 트리(Render Tree) 만들기 : CSS/Style 데이터를 파싱하고 그 스타일 데이터들로 렌더 트리(Render Tree)를 만드는 과정으로 이때 브라우저 상에 내용이 어떻게 나타날지 시각적 요소가 결정된다.
+ 3. 렌더 트리(Render Tree) 레이아웃 만들기: 각 노드들에게 스크린의 어느 공간에 위치해야 할지 각각의 값(Positionm, Size)을 부여하는 과정이다.
+ 4. 렌더 트리 페인팅 (Renter Tree Painting) : 앞선 과정에서 만들어진 레이아웃에 맞게 브라우저 화면에 그려준다.  
+
+![webkit main flow](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcEgC5C%2FbtqCoQ0Mmec%2F7CKjkqxPgtLFTwl6wIKTN1%2Fimg.png)  
 <br />
 
 # 1. 로딩 최적화
 <br />
 
+
 ## - 브라우저 기준의 로딩 최적화<br />
- 로딩 최적화를 위해 `DOMContentLoaded` 시간을 앞당길 수 있으려면 html의 parsing을 막는 js와 css 로드 시점을 앞당겨야 한다. <br />
+ HTML의 테그를 바꾸는데 영향을 줄 수 있는 css와 js로 인해 이 두 파일이 html의 parsing을 막는 블록 리소스가 발생되면서  `DOMContentLoaded` 시간이 길어진다. 로딩 최적화를 위해 `DOMContentLoaded` 시간을 앞당길 수 있으려면 js와 css 로드 시점을 앞당겨야 한다. <br />
 ![block parsing](https://image.slidesharecdn.com/webapp03-190201074444/95/2018-16-638.jpg?cb=1549007284)
 <br />
 
