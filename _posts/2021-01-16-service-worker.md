@@ -22,8 +22,9 @@ tags: [project]
 
 ![mp4_206_error.jpg](/assets/img/mp4_206_error.jpg)
 
-![sw_fetch.jpg](/assets/img/sw_fetch.jpg) > <br /> >
-![provisional_header.jpg](/assets/img/provisional_header.jpg) > <br />
+![sw_fetch.jpg](/assets/img/sw_fetch.jpg) > <br />
+
+![provisional_header.jpg](/assets/img/provisional_header.jpg) <br />
 
 HTTP 206 상태코드가 어떤 의미인지부터 찾아보니 206 Partial Content는 Range 헤더에 기술된 데이터 범위에 대한 요청이 성공적으로 응답되어 바디에 해당되는 데이터를 담고 있다는 것을 알려준다.
 
@@ -57,7 +58,7 @@ stackoverflow에 올라온 그나마 비슷한 답변들에서 다음과 같은 
 
 ### 워커는 싱글 스레드인 JavaScript에 멀티스레드 기능을 지원한다.
 
-워커가 생성될 때마다 JavaScript를 실행할 수 있는 고유 스레드를 생성하여 속도 성능을 크게 향상시킬 수 있다. 로딩과 실행이 오래 걸리는 JavaScript 파일 실행할 때 복잡한 계산은 워커에게 맡기고 JavaScript은 그밖의 일을 처리하게 된다.
+워커가 생성될 때마다 JavaScript를 실행할 수 있는 고유 스레드를 생성하여 속도 성능을 크게 향상시킬 수 있다. 로딩과 실행이 오래 걸리는 JavaScript 파일 실행할 때 복잡한 계산은 워커에게 맡기고 JavaScript은 그밖의 일을 처리하게 된다. 워커는 window객체의 속성 중 하나로 `window.worker`로 이용할 수 있다.
 <br />
 서비스 워커는 네트워크를 관리하는데 PWA를 가능케 하는 기술이다. 웹페이지에 PWA 기술을 도입하면 오프라인에서도 돌아가고 Push 알림도 보내고 모바일에서 설치할 수도 있다. <br />
 
